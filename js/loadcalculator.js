@@ -12,7 +12,7 @@ var calculate = function(buttonselector, outputselector){
 
 var showresult = function(outputselector, res){
     for (var item in res) {
-        alert(JSON.stringify(res[item].value));
+        console.log(res[item].value);
         $(outputselector).append("<div id='output"+item+"'></div>");
         switch (res[item].type) {
             case "markdown":
