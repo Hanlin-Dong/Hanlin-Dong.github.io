@@ -1,0 +1,33 @@
+---
+layout: tool
+title: "纤维截面生成"
+subtitle: "hello, fiber section"
+class: "基础力学"
+subclass: "材料力学"
+toolid: "opensees-preprocess-fiber-section"
+view:
+    -   type: head
+        text: 截面几何信息
+    -   type: float_array
+        id: dimension
+        text: "截面的几何尺寸\\(h\\times w\\times t_w \\times t_f \\)，用逗号分隔"
+    -   type: float_array
+        id: num_layer
+        text: 翼缘和腹板分别划分层数
+    -   type: int_array
+        id: num_mesh
+        text: 翼缘和腹板分别划分的段数
+    -   type: radio
+        id: direction
+        text: 坐标系方向
+        item: ["2轴沿腹板", "3轴沿腹板"]
+    -   type: int
+        id: mattag
+        text: 材料编号
+    -   type: float_array
+        id: material
+        text: 材料弹性模量和泊松比(用逗号分隔)
+    -   type: int
+        id: sectag
+        text: 生成的截面编号
+---

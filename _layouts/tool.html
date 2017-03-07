@@ -1,0 +1,83 @@
+---
+layout: post
+---
+<br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">输入计算参数</h3>
+  </div>
+  <div class="panel-body">
+    <div id="tool-input">
+      {% for toolview in page.view %}
+        {% case toolview.type %}
+          {% when 'head' %}
+            <h4>{{ toolview.text }}</h4>
+          {% when 'text' %}
+            <div class="form-group" data-type="text">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'int' %}
+            <div class="form-group" data-type="int">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'float' %}
+            <div class="form-group" data-type="float">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'int_array' %}
+            <div class="form-group" data-type="int_array">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'float_array' %}
+            <div class="form-group" data-type="float_array">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'int_or_array' %}
+            <div class="form-group" data-type="int_or_array">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'float_or_array' %}
+            <div class="form-group" data-type="float_or_array">
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              <input type="text" id={{ toolview.id }} class="form-control" name={{ toolview.id }}>
+            </div>
+          {% when 'radio' %}
+            <div class="form-group" data-type="radio" id={{ toolview.id }}>
+              <label for={{ toolview.id }}>{{ toolview.text }}</label>
+              {% for item in toolview.item %}
+                {% if forloop.first == true %}
+                  <div class="radio">
+                    <label><input type="radio" id={{ toolview.id + forloop.index }} name={{ toolview.id + forloop.index }} checked="checked">{{ item }}</label>
+                  </div>
+                {% else %}
+                  <div class="radio">
+                    <label><input type="radio" id={{ toolview.id + forloop.index }} name={{ toolview.id + forloop.index }}>{{ item }}</label>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <input type='button' id='tool-run' class='btn btn-default' value='提交'>
+  </div>
+</div>
+
+
+<!-- <div id="tool-input">
+</div> -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">计算结果</h3>
+  </div>
+  <div class="panel-body">
+    <div id="tool-output">
+    </div>
+  </div>
+</div>

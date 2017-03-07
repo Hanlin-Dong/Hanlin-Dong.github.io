@@ -1,0 +1,40 @@
+---
+layout: tool
+title: "模板"
+subtitle: "这是一个模板"
+class: "OpenSees"
+subclass: ~
+toolid: tool-template
+view:
+    -   type: head
+        text: 这里是一组数据的标题
+    -   type: text
+        id: mytext
+        text: 输入一个字符串
+    -   type: int
+        id: myint
+        text: 输入一个整数
+    -   type: float
+        id: myfloat
+        text: 输入一个浮点数
+    -   type: int_array
+        id: myintarray
+        text: 输入一个整数数组
+    -   type: float_array
+        id: myfloatarray
+        text: 输入一个浮点数数组
+    -   type: int_or_array
+        id: myintorarray
+        text: 输入一个整数或一个整数数组
+    -   type: float_or_array
+        id: myfloatorarray
+        text: 输入一个浮点数或一个浮点数数组
+    -   type: radio
+        id: myradio
+        text: 单选
+        widget: radio
+        item:
+            - 选我返回0
+            - 选我返回1
+            - 选我返回2
+---
