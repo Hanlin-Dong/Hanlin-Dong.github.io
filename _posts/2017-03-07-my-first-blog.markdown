@@ -4,6 +4,7 @@ title:      "我的第一篇博文"
 subtitle:   "A big step of myself"
 date:       2017-03-07 12:00:00
 author:     翰林
+catalog:    true
 tags:
     -   心情
 ---
