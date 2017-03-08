@@ -15,7 +15,8 @@ var run = function(args){
     }
     var highchartjson = {
                 chart: {
-                    type: "scatter"
+                    type: "scatter",
+                    height: 600
                 },
                 title: {
                     text: "文件:"+filename
