@@ -1,9 +1,9 @@
 ---
 layout: tool
 title: "纤维截面生成"
-subtitle: "hello, fiber section"
-class: "基础力学"
-subclass: "材料力学"
+subtitle: "目前只支持H形截面钢材"
+class: "OpenSees"
+subclass: "前处理"
 toolid: "opensees-preprocess-fiber-section"
 view:
     -   type: head
@@ -26,7 +26,7 @@ view:
         text: 材料编号
     -   type: float_array
         id: material
-        text: 材料弹性模量和泊松比(用逗号分隔)
+        text: "材料弹性模量\\( E \\)和泊松比\\( \\nu \\)"
     -   type: int
         id: sectag
         text: 生成的截面编号

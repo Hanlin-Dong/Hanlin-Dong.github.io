@@ -92,9 +92,19 @@ var run = function(args){
         cmd += "uniaxialMaterial Elastic " + (3000 + sectag) + " " + (mor * 5.0/3 * width * thick_flange).toFixed(4) + "\n";
     }
     cmd += "section Aggregator " + sectag + " " + (3000+sectag) + " Vy " + (4000+sectag) + " Vz " + (2000+sectag) + " T -section " + (1000+sectag) + "\n";
-    alert(cmd);
     // assemble result
-    var result = [{"type": "markdown", "value": "## 纤维截面生成代码："}, {"type": "textarea", "value": cmd}];
+    var md = "## 抗剪和抗弯刚度计算公式\n" +
+             "剪切模量：\n $$G=\\frac{E}{2(1+\nu )}$$ \n" +
+             "2轴沿腹板时，有效抗剪截面：\n $$ A_2 =ht_w $$ \n $$ A_3 = \\frac{5}{3}wt_f $$ \n" +
+             "抗剪刚度：\n $$ K_\\mathrm{v} = GA $$ \n" +
+             "扭转刚度：\n $$ K_\\theta =2K_1 +K_2 +2\alpha D^4 $$\n" +
+             "其中，\n $$ K_1 =B t_1^3 \\left[\\frac{1}{3}-0.21\\frac{t_f}{B}\\left(1-\\frac{t_f^4}{12B^4}\\right)\\right] $$ \n" +
+             "$$ K_2 =\\frac{1}{3}\\left(\\frac{1}{2}H-t_f \\right)t_w^3 $$ \n" +
+             "$$ \\alpha =\\frac{\\min(t_f, t_w)}{\\maxf(t_f, t_w)}\\left(0.15+0.10\\frac{r}{t_f}\\right) $$ \n" +
+             "D = \\frac{(t_f +r)^2 +rt_w +(t_w /2)^2}{2r+t_f }, 当t_w <2(t_f +r) $$ \n"; 
+        md += "## 纤维截面生成代码："
+
+    var result = [{"type": "markdown", "value": md}, {"type": "textarea", "value": cmd}];
     return result;
 }
 
