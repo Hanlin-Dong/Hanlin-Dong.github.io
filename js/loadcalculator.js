@@ -26,7 +26,7 @@ var showresult = function(outputselector, res){
                 //parse svg.js
                 break;
             case "textarea":
-                var textarea = $("<textarea></textarea>").addClass("form-control").attr("rows", "10").val(res[item].value);
+                var textarea = $("<textarea></textarea>").addClass("form-control").attr("rows", "18").val(res[item].value);
                 var divblock = $("<div></div>").addClass("form-group").append(textarea);
                 var formblock = $("<form></form>").attr("role", "form").append(divblock);
                 $("#output"+item).append(formblock);
