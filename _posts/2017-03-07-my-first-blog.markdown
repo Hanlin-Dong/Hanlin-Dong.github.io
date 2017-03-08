@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "我的第一篇博文"
-subtitle:   "A big step of myself"
+title:      "我的网站开通了"
+subtitle:   "It is a start of something new."
 date:       2017-03-07 12:00:00
 author:     董翰林
 catalog:    true
