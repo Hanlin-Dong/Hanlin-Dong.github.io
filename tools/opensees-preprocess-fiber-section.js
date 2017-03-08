@@ -95,7 +95,8 @@ var run = function(args){
     // assemble result
     var md = "## 抗剪和抗弯刚度计算公式\n" +
              "剪切模量：\n $$G=\\frac{E}{2(1+\nu )}$$ \n" +
-             "2轴沿腹板时，有效抗剪截面：\n $$ A_2 =ht_w $$ \n $$ A_3 = \\frac{5}{3}wt_f $$ \n" +
+             "2轴沿腹板时，有效抗剪截面：\n $$ A_2 =ht_w $$ \n" + 
+             "$$ A_3 = \\frac{5}{3}wt_f $$ \n" +
              "抗剪刚度：\n $$ K_\\mathrm{v} = GA $$ \n" +
              "扭转刚度：\n $$ K_\\theta =2K_1 +K_2 +2\alpha D^4 $$\n" +
              "其中，\n $$ K_1 =B t_1^3 \\left[\\frac{1}{3}-0.21\\frac{t_f}{B}\\left(1-\\frac{t_f^4}{12B^4}\\right)\\right] $$ \n" +
