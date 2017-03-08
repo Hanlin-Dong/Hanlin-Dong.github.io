@@ -1,14 +1,11 @@
 ---
 layout:     post
 title:      "我的第一篇博文"
-subtitle:   ""
+subtitle:   "A big step of myself"
 date:       2017-03-07 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-android.jpg"
+author:     翰林
 tags:
-    - 知乎
-    - 交互设计
-    - Android
+    - 心情
 ---
 ## 百般纠结后的决定
 
