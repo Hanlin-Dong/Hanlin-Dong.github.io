@@ -1,6 +1,6 @@
 # Site settings
 title: 翰林苑
-SEOTitle: 董翰林的博客 | Hanlin Dong Blog | Hanlin Dong | HanlinDong
+SEOTitle: 翰林苑|董翰林的博客|Hanlin Dong Blog
 header-img: img/home-bg.jpg
 email: hanlin.dong@gmail.com
 description: "董翰林 | 结构工程"
@@ -12,8 +12,8 @@ baseurl: ""                             # for example, '/blog' if your blog host
 
 # SNS settings
 RSS: false
-weibo_username:     freemandong
-zhihu_username:     freemandong
+weibo_username:     ShearTheMoment
+zhihu_username:     董木木
 github_username:    hanlin-dong
 #twitter_username:  huxpro
 facebook_username:  freemandong
@@ -62,22 +62,16 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Baidu Analytics 
 # ba_track_id: [your track id]
 
-# Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
-
-
-
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "土木，世界的五分之二"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "潦倒不通事物，愚顽怕读文章。<br>天下无能第一，古今不肖无双。"
+sidebar-avatar: /img/avatar-hanlin.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 
 
@@ -96,62 +90,9 @@ friends: [
 ]
 
 
-# Structural Tools
-tools: [
-    {
-        text: "OpenSees",
-        display: true,
-        child: [
-            {
-                text: "前处理",
-                display: true,
-                child: [
-                    {
-                        name: "opensees-preprocess-fiber-section",
-                        text: "纤维截面生成",
-                        display: true
-                    }
-                ]
-            },
-            {
-                text: "后处理",
-                display: true,
-                child: [
-                    {
-                        name: "opensees-postprocess-xyplot",
-                        text: "绘制x-y曲线",
-                        display: true
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        text: "基础力学",
-        display: true,
-        child: [
-            {
-                text: "材料力学",
-                display: true,
-                child: [
-                    {
-                        name: "mechanics-materal-section-properties",
-                        text: "截面特性",
-                        display: true
-                    }
-                ]
-            }
-        ]
-    }
-]
-
 tools-classification: [
     {
         text: "OpenSees",
         child: ["前处理", "后处理"]
-    },
-    {
-        text: "基础力学",
-        child: ["材料力学", "理论力学"]
     }
 ]
