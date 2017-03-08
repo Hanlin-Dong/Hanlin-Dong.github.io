@@ -270,6 +270,8 @@
 <!-- load tool js file -->
 {% if page.layout == "tool" %}
 <script src="https://cdn.bootcss.com/highcharts/5.0.7/highcharts.js"></script>
+<script src="https://cdn.bootcss.com/highcharts/5.0.7/js/modules/exporting.js"></script>
+<script src="https://cdn.bootcss.com/highcharts/5.0.7/js/modules/offline-exporting.js"></script>
 <script src="/js/loadcalculator.js"></script>
 <script>
     $(document).ready(function(){
@@ -279,6 +281,19 @@
                 $(sibling).find("label").find(":radio").attr("checked", false);
             })
             $(this).find("label").find(":radio").attr("checked", true);
+        });
+        $(":file").on("change", function(){
+            var selector = $("#"+$(this).attr("id")+"_result");
+            var files = this.files;
+            if (files.length){
+                var file = files[0];
+                filename = file.name;
+                var reader = new FileReader();
+                reader.onload = function(){
+                    selector.val(this.result);
+                }
+                reader.readAsText(file);
+            }
         })
 
     })

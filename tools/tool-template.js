@@ -2,13 +2,21 @@ var run = function(args){
     var mytext = args.mytext;
     var myint = args.myint;
     var myfloat = args.myfloat;
+    var myintarray = args.myintarray;
+    var myfloatarray = args.myfloatarray;
+    var myintorarray = args.myintorarray;
+    var myfloatorarray = args.myfloatorarray;
+    var myfilesingle = args.myfilesingle;
     var result = [];
     var md = "## 以下是使用Markdown生成的计算书\n" +
              "### 这是二级标题\n" +
              "#### 这是三级标题\n" +
              "这一段是正文部分，可以进行相关描述。\n\n" +
-             "文本框的内容可以输入计算书中。如文字框：" + mytext +
-             "；整数与浮点数的积： " + (myint * myfloat) + "\n\n" +
+             "文本框的内容可以输入计算书中。如：\n\n" + 
+             "文字框： " + mytext + "  \n" +
+             "整数与浮点数的积： " + (myint * myfloat) + "  \n" +
+             "整数数组： " + myintarray + "  \n" +
+             "读取文件内容： " + myfilesingle + "\n\n" +
              "可以输入 \\\\(\\LaTeX\\\\) 格式的公式（注意要用四个反斜杠）：\n\n" +
              "$$\\lambda = N/A=0.9$$\n" +
              "也可以输入多级列表：  \n" +

@@ -19,7 +19,9 @@ var showresult = function(outputselector, res){
                 $("#output"+item).html(marked(res[item].value));
                 break;
             case "highchart":
-                $("#output"+item).before("<h2>"+res[item].title+"</h2><br>");
+                if (res[item].title){
+                    $("#output"+item).before("<h2>"+res[item].title+"</h2><br>");
+                }
                 $("#output"+item).highcharts(res[item].value);
                 break;
             case "svg":
@@ -112,7 +114,11 @@ var assemble = function(inputselector){
                     }
                 })
                 break;
+            case "file_single":
+                var id = $(dom).find(":file").attr("id");
+                toolparam[id] = $("#"+id+"_result").val();
         }
     })
+    console.log(toolparam);
     return toolparam;
 }

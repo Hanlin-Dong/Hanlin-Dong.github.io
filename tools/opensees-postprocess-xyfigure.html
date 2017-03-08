@@ -1,0 +1,24 @@
+---
+layout: tool
+title: "绘制xy关系图"
+author: "董翰林"
+subtitle: "读取OpenSees recorder生成的文件，轻点即可作图。"
+class: "OpenSees"
+date: 2017-03-08 16:00:00
+subclass: "后处理"
+toolid: "opensees-postprocess-xyfigure"
+view:
+    -   type: head
+        text: 读取文件
+    -   type: file_single
+        id: recorderdata
+        text: 选取recorder生成的文件
+    -   type: int_array
+        id: choosecolumn
+        text: x轴和y轴数据分别所在列号
+        default: "1,0"
+    -   type: float_array
+        id: ampfactor
+        text: x轴和y轴数所分别所乘系数
+        default: "1,1"
+---
