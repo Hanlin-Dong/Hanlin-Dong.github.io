@@ -1,11 +1,11 @@
 ---
 layout:     post
 title:      "我的第一篇博文"
-subtitle:   "A big step of myself"
+subtitle:   "A big step of myself"
 date:       2017-03-07 12:00:00
-author:     翰林
+author:     翰林
 tags:
-    - 心情
+    -   心情
 ---
 ## 百般纠结后的决定
 
