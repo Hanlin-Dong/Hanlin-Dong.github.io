@@ -4,6 +4,7 @@ title: "大学的“望境”"
 subtitle: "听许江与王澍谈话有感"
 date: 2017-03-24 19:00:00
 author: 董翰林
+header-img: "img/header-university-wangjing.jpg"
 catalog: true
 tags:
   - 随笔

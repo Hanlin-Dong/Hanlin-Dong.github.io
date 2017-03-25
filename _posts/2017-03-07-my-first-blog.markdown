@@ -4,6 +4,7 @@ title:      "我的网站开通了"
 subtitle:   "It is a start of something new."
 date:       2017-03-07 12:00:00
 author:     董翰林
+header-img: "img/header-my-first-blog.jpg"
 catalog:    true
 tags:
     -   心情

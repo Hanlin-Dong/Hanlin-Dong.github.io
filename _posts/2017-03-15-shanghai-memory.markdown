@@ -4,6 +4,7 @@ title: "Memory on Road, Memories in Mind."
 subtitle: "谨以此文祭奠迈玛瑞，和一切与我有关死去的东西。"
 date: 2017-03-15 04:00:00
 author: 董翰林
+header-img: "img/header-shanghai-memory.jpg"
 catalog: true
 tags:
   - 随笔
