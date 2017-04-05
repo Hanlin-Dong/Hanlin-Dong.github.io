@@ -1,10 +1,10 @@
 # Site settings
-title: 匆匆那年
-SEOTitle: "翰林苑|董翰林的博客|Hanlin Dong Blog"
+title: 翰林苑
+SEOTitle: "翰林苑|董翰林的博客|Hanlin Dong"
 header-img: img/home-bg.jpg
 email: hanlin.dong@gmail.com
-description: "董翰林 | 结构工程"
-keyword: "董翰林, Hanlin, HDong"
+description: "董翰林 | 结构工程 | 翰林"
+keyword: "董翰林, 翰林, Hanlin, HDong"
 url: "https://www.hanlindong.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -56,7 +56,7 @@ kramdown:
 #duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 #Uyan settings
-uyan_username: "2128655"
+# uyan_username: "2128655"
 
 
 
