@@ -4,6 +4,7 @@ title:      "OpenSees五问(1)"
 subtitle:   "有关OpenSees的疑难问题总结"
 date:       2017-04-05 22:00:00
 author:     董翰林
+header-img: "img/header-opensees-5questions-1.jpg"
 catalog:    true
 tags:
     -   OpenSees
