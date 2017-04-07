@@ -164,8 +164,7 @@ fix  1 0 1 1
 uniaxialMaterial Elastic 1 10
 uniaxialMaterial ENT 2 10
 element twoNodeLink 1 0 1 -mat 1 -dir 1
-# element twoNodeLink 2 0 1 -mat 2 -dir 1
-element twoNodeLink 2 1 0 -mat 2 -dir 1
+element twoNodeLink 2 0 1 -mat 2 -dir 1
 pattern Plain 1 Linear {
 	load 1 1. 0. 0.
 }
@@ -175,8 +174,7 @@ numberer Plain
 system BandGeneral
 test NormDispIncr 1.0e-8 10
 algorithm Newton
-# integrator DisplacementControl 1 1 0.2
-integrator DisplacementControl 1 1 -0.2
+integrator DisplacementControl 1 1 0.2
 analysis Static
 analyze 5
 ```
@@ -669,7 +667,7 @@ element twoNodeLink 1 0 1 -mat 1 2 3 -dir 1 2 3 -orient 1. 0. 0. 0. 1. 0. -shear
 
 [8]: /resource/ops/opq04.zip
 
-## 5 recorder输出的几个问题
+## 第5问 recorder输出的几个问题
 
 #### 特征值与特征向量输出
 
