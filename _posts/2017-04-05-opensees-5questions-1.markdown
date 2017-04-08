@@ -11,6 +11,23 @@ tags:
     -   有限元
 ---
 
+本文分析和探讨使用[``OpenSees``][30]时可能会遇到的5个问题，分别是
+
+1. 如何在时程分析中改变步长
+2. [``twoNodeLink``][31]和[``zeroLength``][32]单元的正负向
+3. 如何施加预拉力
+4. [``twoNodeLink``][31]单元的特性
+5. [``recorder``][33]输出的几个问题
+
+
+[30]: http://opensees.berkeley.edu
+
+[31]: http://opensees.berkeley.edu/wiki/index.php/Two_Node_Link_Element
+
+[32]: http://opensees.berkeley.edu/wiki/index.php/ZeroLength_Element
+
+[33]: http://opensees.berkeley.edu/wiki/index.php/Recorder_Command
+
 ## 第1问 如何在时程分析中改变步长
 
 #### 减小时程分析步长可以改善收敛性
