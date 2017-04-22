@@ -77,7 +77,7 @@ tags:
 
 ``AutoCAD``的控制台中，如果直接输入字母，可以调用``AutoCAD``命令。如果输入括号，则可以使用``AutoLisp``。上一小节中，我们就是使用输入括号的方式来执行``AutoLisp``命令的。通过``AutoLisp``可以自定义新的命令。这一小节我们就来介绍如何通过命令来运行上一小节中的``Hello world``脚本。
 
-首先，用文本编辑软件新建一个文本文件，命名为``hello_world.lsp``。这里推荐使用``Sublime Text 3``，其教程可以[在这里][2]找到。也可以根据您的喜好选择``Notepad++``、``UltraEdit``等文本编辑软件，不要使用Windows操作系统自带的``记事本``软件。在文本文件中输入如下代码
+首先，用文本编辑软件新建一个文本文件，命名为``hello_world.lsp``。这里推荐使用``Sublime Text 3``，其教程可以[在这里][3]找到。也可以根据您的喜好选择``Notepad++``、``UltraEdit``等文本编辑软件，不要使用Windows操作系统自带的``记事本``软件。在文本文件中输入如下代码
 
 ~~~ lisp
 (defun c:hello(/)
@@ -105,6 +105,8 @@ hello
 用回车或空格提交，发现弹出了对话框，内容显示：Hello, world!
 
 在本例中，``defun`` 定义了一个``lisp函数``。在``AutoLisp``中，以``c:``开头的函数表示注册一条可执行的命令。本例中``c:hello``就表示注册一个命令``hello``。``alert``函数的用法和上一小节中所述相同。
+
+[3]: http://opensees.hanlindong.com/zh/latest/sublime.html
 
 #### 添加用户交互
 
