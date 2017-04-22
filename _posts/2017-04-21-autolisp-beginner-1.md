@@ -170,7 +170,7 @@ Jack
 
 ~~~ lisp
 (defun c:tricircle(/ rad)
-    (setq rad (getint "input rad <1.0>:"))
+    (setq rad (getreal "input rad <1.0>:"))
     (if (= rad nil) (setq rad 1.0))
     (command "line" '(-120 0) '(120 0) "")
     (command "text" '(110 -20) 10 0 "cos")
