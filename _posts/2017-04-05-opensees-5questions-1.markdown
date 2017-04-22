@@ -9,6 +9,7 @@ catalog:    true
 tags:
     -   OpenSees
     -   有限元
+    -   进阶教程
 ---
 
 本文分析和探讨使用[``OpenSees``][30]时可能会遇到的5个问题，分别是
