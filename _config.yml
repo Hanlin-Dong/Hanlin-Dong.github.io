@@ -86,8 +86,16 @@ service-worker: false
 # Friends
 friends: [
     {
-        title: "百度",
-        href: "http://www.baidu.com"
+        title: "娴言绿语",
+        href: "https://mp.weixin.qq.com/s?__biz=MzI5NDI2NTY2NQ==&mid=100000011&idx=1&sn=d985386d0e874781c41bb7aca6927629&mpshare=1&scene=1&srcid=0422i4sOJMJ4btS7MP5JSugL&key=ef3ba97d86256e846addc26efd23ab3e648a6b451aed0a869ab1a659d1bfe9690ea2b177273ec7f0bd8684567ac02990823f2f96eec98db33ef2b6eeed72090e3d843d59eef8e521e737605b978d3230&ascene=0&uin=NzY5ODEwODQw&devicetype=iMac+MacBook9%2C1+OSX+OSX+10.11.6+build(15G1217)&version=12020510&nettype=WIFI&fontScale=100&pass_ticket=bufH1M6r3g1A8EZHIjv3zd4hziDN0GB4%2Bf4O2i1Rm2ifaJUUQEBgW6FhRsord3W6"
+    },
+    {
+        title: "亚力克斯祝",
+        href: "https://mp.weixin.qq.com/s?__biz=MzIzNjc2MTkyOA==&mid=2247483751&idx=1&sn=0bae83a78f305c84225d45d21affc76b&chksm=e8d3a740dfa42e567363e3a712ef4e22ff327b459dee35370d0a056c42e66562aa85662c8736&mpshare=1&scene=1&srcid=0422s2SCWuyeJCmuCE71uKoP&key=d054b2c1269a6c2e9290eddf2ff6c4ff79935354bbb7745beb765f7e7449c973463e702efde43158c54064cde5b18c3e98189b61b000f4936750463ecc8ca3be5b020b8aff1fe2afad952edc646f2d7f&ascene=0&uin=NzY5ODEwODQw&devicetype=iMac+MacBook9%2C1+OSX+OSX+10.11.6+build(15G1217)&version=12020510&nettype=WIFI&fontScale=100&pass_ticket=bufH1M6r3g1A8EZHIjv3zd4hziDN0GB4%2Bf4O2i1Rm2ifaJUUQEBgW6FhRsord3W6"
+    },
+    {
+        title: "小诗弹记",
+        href: "https://mp.weixin.qq.com/s?__biz=MzIwNjgwODIwOA==&mid=2247483670&idx=1&sn=77a20c6f90e7dece8f8652f1cbfdb10b&chksm=971ab4e9a06d3dff523d357a0c05f30e06805a96df6f24d1f07ebb1a442ea4eeb39487b5fd11&mpshare=1&scene=1&srcid=0422zmkegOMHx7NtU7ESCQYt&key=5099feb8a76f6ef0eca1524a8ea32e9390c6dd0e1e648a382aee14975163902440c092c91563eabcbf30050fe064c4d31301a215724a6be89db4f62300c15591a16e194b9db173d64561d5d6b5f78dbe&ascene=0&uin=NzY5ODEwODQw&devicetype=iMac+MacBook9%2C1+OSX+OSX+10.11.6+build(15G1217)&version=12020510&nettype=WIFI&fontScale=100&pass_ticket=bufH1M6r3g1A8EZHIjv3zd4hziDN0GB4%2Bf4O2i1Rm2ifaJUUQEBgW6FhRsord3W6"
     }
 ]
 
