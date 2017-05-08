@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "AutoLisp入门实例教程(1)"
+title:      "AutoLisp入门实例教程(上)"
 subtitle:   "AutoLisp实例详细解读，入门AutoCAD二次开发的捷径"
 date:       2017-04-21 12:00:00
 author:     董翰林
