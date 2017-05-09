@@ -1,10 +1,10 @@
 # Site settings
 title: 翰林苑
-SEOTitle: "翰林苑|董翰林的个人网站"
+SEOTitle: "翰林苑 | 董翰林的个人网站"
 # header-img: img/home-bg.jpg
 email: hanlin.dong@gmail.com
-description: "董翰林 | 结构工程 | 翰林"
-keyword: "董翰林, 翰林, Hanlin, HDong"
+description: "董翰林的个人网站，同济土木结构工程专业，提供在线结构工具，和结构工程相关资源下载。"
+keyword: "董翰林, 同济土木, 结构工具, opensees"
 url: "https://www.hanlindong.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -85,6 +85,10 @@ service-worker: false
 
 # Friends
 friends: [
+    {
+        title: "小同人",
+        href: "https://mp.weixin.qq.com/s?__biz=MzIxMzI5MzgyNg==&mid=2247483702&idx=1&sn=daea7b8132ffafff11df67532165b98e&scene=27#wechat_redirect"
+    },
     {
         title: "Wonderworks",
         href: "https://mp.weixin.qq.com/s?__biz=MzAwMTcwMDg5MA==&mid=208299309&idx=1&sn=4685f66683a9aed5de31cc59ea9b8bff&chksm=134b6058243ce94e9567d6b906699301c776a69d3a0d48dda34870dc3126ec44449f2004373f&mpshare=1&scene=1&srcid=0426V3UGfCpAyh7YvNvTV9Ys&key=7a29a072f4e2e9e620ef50acb56c85da13fa3b2278af80cba91afd48847321c13b44cc7f703a1e64c9c699f1d65b38d1284c74f5e78d7141e6b9687dcb443349df728639043e2eef6a592152d16c5857&ascene=0&uin=NzY5ODEwODQw&devicetype=iMac+MacBook9%2C1+OSX+OSX+10.11.6+build(15G1217)&version=12020510&nettype=WIFI&fontScale=100&pass_ticket=5WFS2wE9kkzkH2zWPMC6ZC7izXm3uq1jlv7KqzaPb3eElfuoJDK6Adopytm5Bxgo"
