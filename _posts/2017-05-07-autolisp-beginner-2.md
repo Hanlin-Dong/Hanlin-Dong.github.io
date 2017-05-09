@@ -49,7 +49,7 @@ tags:
 
 #### 脚本代码
 
-~~~ autolisp
+~~~ Lisp
 (defun c:plotOpensees(/ filename) 
     ; create layers
     (entmake (list'(0 . "LAYER")'(100 . "AcDbSymbolTableRecord")'(100 . "AcDbLayerTableRecord") '(62 . 1) '(370 . 0) '(70 . 0) '(290 . 1) '(2 . "nodes")))
@@ -261,7 +261,7 @@ plotOpensees
 
 **打开方式：** 打开文件的方式，有只读``"r"``，写``"w"``，附加``"a"``等。
 
-打开文件后，应养成关系的良好习惯。
+打开文件后，应养成关闭的良好习惯。
 
 ### ``read-line``函数
 
