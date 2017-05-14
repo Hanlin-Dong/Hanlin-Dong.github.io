@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "AutoLisp入门实例教程(下)"
-subtitle:   "AutoLisp实例详细解读，入门AutoCAD二次开发的捷径"
+subtitle:   "AutoCAD自动绘制OpenSees结构脚本、AutoCAD批量打印脚本"
 date:       2017-05-07 12:00:00
 author:     董翰林
 header-img: "img/header-autolisp-beginner-2.jpg"
