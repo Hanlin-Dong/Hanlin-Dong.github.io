@@ -94,7 +94,7 @@ var run = function(args){
     cmd += "section Aggregator " + sectag + " " + (3000+sectag) + " Vy " + (4000+sectag) + " Vz " + (2000+sectag) + " T -section " + (1000+sectag) + "\n";
     // assemble result
     var md2 = "#### 抗剪和抗弯刚度计算公式\n" +
-             "剪切模量：\n $$G=\\frac{E}{2(1+\nu )}$$ \n" +
+             "剪切模量：\n $$G=\\frac{E}{2(1+\\nu )}$$ \n" +
              "2轴沿腹板时，有效抗剪截面：\n $$ A_2 =ht_w $$ \n\n" + 
              "$$ A_3 = \\frac{5}{3}wt_f $$ \n\n" +
              "抗剪刚度：\n $$ K_\\mathrm{v} = GA $$ \n\n" +
