@@ -10,24 +10,42 @@ layout: page
 				<div class="row">
 					<div class="col-12 col-md-8">
 						<dl class="row">
+							{% if page.title %}
 							<dt class="col-sm-3">名称</dt>
 							<dd class="col-sm-9">{{ page.title }}</dd>
+							{% endif %}
+							{% if page.subtitle %}
 							<dt class="col-sm-3">描述</dt>
 							<dd class="col-sm-9">{{ page.subtitle }}</dd>
+							{% endif %}
+							{% if page.description %}
 							<dt class="col-sm-3">简介</dt>
 							<dd class="col-sm-9">{{ page.description }}</dd>
+							{% endif %}
+							{% if page.updatetime %}
 							<dt class="col-sm-3">更新时间</dt>
 							<dd class="col-sm-9">{{ page.updatetime | date: "%Y-%m-%d"}}</dd>
+							{% endif %}
+							{% if page.version %}
 							<dt class="col-sm-3">版本</dt>
 							<dd class="col-sm-9">{{ page.version }}</dd>
+							{% endif %}
+							{% if page.ftype %}
 							<dt class="col-sm-3">类型</dt>
 							<dd class="col-sm-9">{{ page.ftype }}</dd>
+							{% endif %}
+							{% if page.fname %}
 							<dt class="col-sm-3">文件名</dt>
 							<dd class="col-sm-9">{{ page.fname }}</dd>
+							{% endif %}
+							{% if page.author %}
 							<dt class="col-sm-3">作者</dt>
 							<dd class="col-sm-9">{{ page.author }}</dd>
+							{% endif %}
+							{% if page.license %}
 							<dt class="col-sm-3">版权协议</dt>
 							<dd class="col-sm-9">{{ page.license }}</dd>
+							{% endif %}
 						</dl>
 					</div>
 					<div class="col-12 col-md-4 text-center">

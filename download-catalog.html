@@ -31,7 +31,7 @@ subtitle: 实用资源一键下载
 					{% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "downloadpages/" | append: ".html" %}
 					{% if download.path == realpath %}
 					<div class="card card-myelement" style="display:none;">
-						<a href="{{ download.url }}" class="no-decoration"><div class="card-body">
+						<a href="{{ download.url | replace: ".html", "/" }}" class="no-decoration"><div class="card-body">
 							<h4 class="card-title">{{ download.title }}</h4>
 							<h6 class="card-subtitle mb-2 text-muted">{{ download.subtitle }}</h6>
 							<p class="card-text">{{ download.description }}</p>
