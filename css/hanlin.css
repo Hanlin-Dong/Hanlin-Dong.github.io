@@ -1,23 +1,95 @@
-/* to make lines scroll instead of wrap */
-/* from http://stackoverflow.com/a/23393920 */
-
-.highlight pre code * {
-  white-space: nowrap;    // this sets all children inside to nowrap
+a.icon-gray {
+	color: #868e96;
+}
+a:hover.icon-gray {
+	color: #0056b3;
+}
+a.no-decoration {
+	color: inherit;
+}
+a:hover.no-decoration {
+	text-decoration: none;
+	color: #0056b3;
+}
+a:hover.tag {
+	border-color: #0056b3;
+	text-decoration: none;
+	color: #0056b3;
+}
+.post h2 {
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+.post h3 {
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+}
+.post h4 {
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+}
+.post img {
+	max-width: 100%;
+	height: auto;
+}
+.sns {
+	font-size: 150%;
+}
+.sidenav-list {
+	list-style: none;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	font-size: 90%;
+}
+.sidenav a {
+	text-decoration: none;
+	color: #868e96;;
+}
+.sidenav a:hover {
+	text-decoration: none;
+	color: #0056b3;
+}
+.sidenav-list .nava-2 {
+	padding-left: 1rem;
+}
+.sidenav-list .nava-3 {
+	padding-left: 2rem;
+}
+.card-myelement {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+.tag {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999em;
+  border-color: gray;
+  padding: 0 10px;
+  color: gray;
+  line-height: 24px;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0 1px;
+  margin-bottom: 6px;
 }
 
-.highlight pre {
-  overflow-x: auto;       // this sets the scrolling in x
+
+/*#portamento_container {
+	float: right;
+	position: relative;
 }
-
-.highlight pre code {
-  white-space: pre;       // forces <code> to respect <pre> formatting
+#portamento_container #sidenav {
+	float: none;
+	position: absolute;
 }
-
-
-/*
- * GitHub style for Pygments syntax highlighter, for use with Jekyll
- * Courtesy of GitHub.com
- */
+#portamento_container #sidenav.fixed {
+	position: fixed;
+}*/
+/*a {
+	font-size: 150% !important;
+}*/
 
 .highlight pre, pre, .highlight .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
 .highlight .c { color: #999988; font-style: italic; }

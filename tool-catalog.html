@@ -1,0 +1,49 @@
+---
+layout: default
+title: 工具
+subtitle: 实用的在线结构小工具
+---
+
+{% include jumbotron.html %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h6 class="mb-2">分类列表</h6>
+            <div id="tag_cloud">
+                {% for type in site.data.tools.toc %}
+                <a href="#{{ type.type }}" class="tag">{{ type.text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12">
+            {% for type in site.data.tools.toc %}
+            <div class="card mb-1" id="{{ type.type }}">
+                <div class="card-header d-flex justify-content-end">
+                    <div class="mr-auto"><h4 class="h4"><i class="fa fa-tag"></i> {{ type.text }} <span class="badge badge-secondary">{{ type.items.size }}</span></h4></div>
+                    <div class="my-collapse" data-collapsed="false" style="display:none;"><a href="javascript:void(0);" class="text-right text-muted"><i class="fa fa-angle-double-down"></i>展开全部</a></div>
+                </div>
+                <div class="card-body card-mywrapper">
+                    {% for item in type.items %}
+                    {% for tool in site.pages %}
+                    {% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "tools/" | append: ".html" %}
+                    {% if tool.path == realpath %}
+                    <div class="card card-myelement" style="display:none;">
+                        <a href="{{ tool.url | prepend: site.baseurl }}" class="no-decoration"><div class="card-body">
+                            <h4 class="card-title">{{ tool.title }}</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ tool.subtitle }}</h6>
+                            <p class="card-text">{{ tool.description }}</p>
+                        </div></a>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% include page-bottom.html %}
+</div>

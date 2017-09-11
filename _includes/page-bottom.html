@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col">
+		<h6 class="mt-1">FEATURED TAGS</h6>
+		<div class="tags">
+			{% for tag in site.tags %}
+			<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" class="tag">{{ tag[0] }}</a>
+			{% endfor %}
+		</div>
+		<h6 class="mt-1">FRIENDS</h6>
+		<ul class="list-inline">
+			{% for friend in site.friends %}
+			<li class="list-inline-item"><a href="{{friend.href}}"><span class="text-muted">{{friend.title}}</span></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

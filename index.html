@@ -1,42 +1,21 @@
 ---
 layout: page
-description: "董翰林的个人网站"
+title: 翰林苑
+subtitle: 董翰林的个人网站
 ---
 
 {% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
-    </a>
-    <p class="post-meta">
-        作者： {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}，发布于 {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+<div class="row">
+	<div class="col">
+		<a href="{{ post.url | prepend: site.baseurl }}" class="no-decoration">
+		<div class="card-body">
+			<h4 class="card-title">{{ post.title }}</h4>
+			<h6 class="card-subtitle mb-2 text-muted">作者： {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}，发布于 {{ post.date | date: "%Y-%m-%d" }}</h6>
+			<p class="card-text">{{ post.content | strip_html | truncate:200 }}</p>
+		</div>
+		</a>
+	</div>
 </div>
-<hr>
+<hr class="row">
 {% endfor %}
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}

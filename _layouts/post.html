@@ -2,293 +2,52 @@
 layout: default
 ---
 
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        position: relative;
-        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
-    }
+{% include jumbotron.html %}
 
-    {% if page.header-mask %}
-    header.intro-header .header-mask{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: rgba(0,0,0, {{ page.header-mask }});
-    }
-    {% endif %}
-</style>
-<header class="intro-header" >
-    <div class="header-mask"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        {% for tag in page.tags %}
-                        <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %}
-                        always create a h2 for keeping the margin , Hux
-                    {% endcomment %}
-                    {% comment %} if page.subtitle {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% comment %} endif {% endcomment %}
-                    <span class="meta">作者： {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}, 发布于： {{ page.date | date: "%B %-d, %Y" }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 post">
+			<article>
 				{{ content }}
+			</article>
+			<!-- <div class="d-flex justify-content-between">
+				<div>
+					{% if page.previous.url %}
+					<a href="{{ page.previous.url }}" class="btn btn-outline-secondary btn-lg"><small>上一篇</small><br>{{ page.previous.title }}</a>
+					{% endif %}
+				</div>
+				<div>
+					{% if page.next.url %}
+					<a href="{{ page.next.url }}" class="btn btn-outline-secondary btn-lg"><small>下一篇</small><br>{{ page.next.title }}</a>
+					{% endif %}
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-auto mr-auto">
+					{% if page.previous.url %}
+					<a href="{{ page.previous.url }}" class="btn btn-outline-secondary btn-lg"><small>上一篇</small><br>{{ page.previous.title }}</a>
+					{% endif %}
+				</div>
+				<div class="col-auto">
+					{% if page.next.url %}
+					<a href="{{ page.next.url }}" class="btn btn-outline-secondary btn-lg"><small>下一篇</small><br>{{ page.next.title }}</a>
+					{% endif %}
+				</div>
+			</div>
+			<hr class="row">
+			{% include baidufenxiang.html %}
+			{% include changyan.html %}
+			{% include page-bottom.html %}
+		</div>
 
-                <hr style="visibility: hidden;">
-
-                {% if site.duoshuo_share && site.duoshuo_username %}
-                <!-- 多说 Share start -->
-                <div class="ds-share"
-                    style="text-align: right"
-                    data-thread-key="{{page.id}}"
-                    data-title="{{page.title}}"
-                    data-url="{{site.url}}{{site.baseurl}}{{page.url}}"
-                    data-images="{{ site.url }}{{site.baseurl}}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-                    data-content="{{ content | strip_html | truncate:80 }} | {{ site.SEOTitle }} " >
-                    <div class="ds-share-inline">
-                      <style> 
-                        .ds-share-icons-16 {display:none;} 
-                      </style>
-                      <ul class="ds-share-icons-16">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- 多说 Share end-->
-                {% endif %}
-
-
-                <ul class="pager">
-                    {% if page.previous.url %}
-                    <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
-                        <span>{{page.previous.title}}</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
-                        <span>{{page.next.title}}</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
-
-
-                {% if site.duoshuo_username %}
-                <!-- 多说评论框 start -->
-                <div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url={{ page.url }}></div>
-                <!-- 多说评论框 end -->
-                {% endif %}
-
-                {% if site.disqus_username %}
-                <!-- disqus 评论框 start -->
-                <div class="comment">
-                    <div id="disqus_thread" class="disqus-thread"></div>
-                </div>
-                <!-- disqus 评论框 end -->
-                {% endif %}
-
-                {% if site.uyan_username %}
-                <!-- 友言公共JS代码 -->
-                <div>
-                <br><br>
-                <!-- JiaThis Button BEGIN -->
-                <div class="jiathis_style_32x32">
-                    <a class="jiathis_button_qzone"></a>
-                    <a class="jiathis_button_tsina"></a>
-                    <a class="jiathis_button_tqq"></a>
-                    <a class="jiathis_button_weixin"></a>
-                    <a class="jiathis_button_renren"></a>
-                    <a href="http://www.jiathis.com/share?uid={{site.uyan_username}}" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-                </div>
-                <script type="text/javascript">
-                var jiathis_config = {data_track_clickback:'true'};
-                </script>
-                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid={{site.uyan_username}}" charset="utf-8"></script>
-                <!-- JiaThis Button END -->
-                </div>
-                <!-- UY BEGIN -->
-                <div>
-                <br><br>
-                <div id="uyan_frame"></div>
-                <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{site.uyan_username}}"></script>
-                </div>
-                <!-- UY END -->
-                {% endif %}
-
-                <!-- 百度分享 -->
-                <br>
-                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></div>
-                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-                <!--畅言  PC和WAP自适应版-->
-                <div id="SOHUCS" sid={{page.id}}></div> 
-                <script type="text/javascript"> 
-                (function(){ 
-                var appid = 'cysVKw7tX'; 
-                var conf = 'prod_41ed296e7e68456c9c8b134520b58508'; 
-                var width = window.innerWidth || document.documentElement.clientWidth; 
-                if (width < 960) { 
-                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-
-            </div>  
-
-    <!-- Side Catalog Container -->
-        {% if page.catalog %}
-            <div class="
-                col-lg-2 col-lg-offset-0
-                visible-lg-block
-                sidebar-container
-                catalog-container">
-                <div class="side-catalog">
-                    <hr class="hidden-sm hidden-xs">
-                    <h5>
-                        <a class="catalog-toggle" href="#">CATALOG</a>
-                    </h5>
-                    <ul class="catalog-body"></ul>
-                </div>
-            </div>
-        {% endif %}
-
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                {% if site.featured-tags %}
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
-                </section>
-                {% endif %}
-
-                <!-- Friends Blog -->
-                {% if site.friends %}
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</article>
-
-
-{% if site.duoshuo_username %}
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"hanlindong"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
-
-
-
-{% if site.disqus_username %}
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{page.id}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
-
-
-{% if site.anchorjs %}
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
-    }
-</style>
-{% endif %}
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<div class="row sticky-top sidenav d-none d-md-block" style="overflow-y:auto;">
+				<div class="col">
+					<h6>NAVIGATION</h6>
+					<ul class="sidenav-list" id="nav">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

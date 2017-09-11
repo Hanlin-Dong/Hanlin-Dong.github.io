@@ -1,203 +1,69 @@
-<!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    {% if site.RSS %}
-                    <li>
-                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.twitter_username %}
-                    <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.zhihu_username %}
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.weibo_username %}
-                    <li>
-                        <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.github_username %}
-                    <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.pinterest_username %}
-                    <li>
-                        <a target="_blank" href="https://www.pinterest.com/{{ site.pinterest_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.facebook_username %}
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.linkedin_username %}
-                    <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> | <a href="/sitemap.xml">sitemap</a>
-                    <br>
-                    <a href="http://www.miitbeian.gov.cn">沪ICP备16018008号-1</a>
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="jumbotron jumbotron-fluid mb-0">
+	<div class="container-fluid">
+		<div class="col text-center">
+			<div class="row">
+				<div class="col-12">
+					<ul class="list-inline sns">
+						<li class="list-inline-item">
+							<a href="https://github.com/{{ site.github_username }}" class="icon-gray">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.researchgate.net/profile/{{ site.researchgate_username }}" class="icon-gray">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="ai ai-researchgate fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.pinterest.com/{{ site.pinterest_username }}" class="icon-gray">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" class="icon-gray">
+								<span class="fa-stack fa-lg">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p class="copyright text-muted">
+                Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
+                <br>
+                Powered by <a href="">Jekyll</a> | Theme by <a href="">Bootstrap</a> | <a href="/sitemap.xml">sitemap</a>
+                <br>
+                <a href="http://www.miitbeian.gov.cn">沪ICP备16018008号-1</a>
+            </p>
+		</div>
+	</div>
+</div>
 </footer>
-
-<script src="{{ "/js/nav.js " | prepend: site.baseurl }}"></script>
+{% include donate-modal.html %}
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async('{{ "/js/jquery.tagcloud.js" | prepend: site.baseurl }}',function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<!-- <script>
-    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script> -->
-
-{% if site.ba_track_id %}
-<!-- Baidu Tongji -->
-<script>
-    // dynamic User by Hux
-    var _baId = '{{ site.ba_track_id }}';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-{% endif %}
-
-
-{% if page.catalog %}
-<!-- Side Catalog -->
-<script type="text/javascript">
-    function generateCatalog (selector) {
-        var P = $('div.post-container'),a,n,t,l,i,c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#"+$(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="'+i+'" rel="nofollow">'+t+'</a>');
-            l = $('<li class="'+n+'_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;    
-    }
-
-    generateCatalog(".catalog-body");
-
-    // toggle side catalog
-    $(".catalog-toggle").click((function(e){
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    /*
-     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
-     * Fork by Hux to support padding
-     */
-    async("{{ '/js/jquery.nav.js' | prepend: site.baseurl }}", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
-{% endif %}
-
-<!-- Mathjax - support LaTeX -->
+<script src="https://cdn.bootcss.com/popper.js/1.12.4/umd/popper.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
 <script async src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
+<script src="/js/hanlin.js"></script>
+{% if page.layout == "download" %}
+<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
+<script src="/js/loaddownload.js"></script>
+{% endif %}
 {% if page.layout == "tool" %}
-<!-- markdown browser parser -->
 <script async src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js"></script>
-<!-- load tool js file -->
 <script src="https://cdn.bootcss.com/highcharts/5.0.7/highcharts.js"></script>
 <script src="https://cdn.bootcss.com/highcharts/5.0.7/js/modules/exporting.js"></script>
 <script src="https://cdn.bootcss.com/highcharts/5.0.7/js/modules/offline-exporting.js"></script>
@@ -209,30 +75,5 @@
         alert("没有指定正确的javascript运算器");
     }
 </script>
-<script src="/tools/{{ page.toolid }}.js"></script>
+<script src="{{ page.path | replace: ".html" "" | prepend: "/"}}.js"></script>
 {% endif %}
-<!-- Baidu Tongji -->
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?75cc7329754370cee3bbf4e2f63834a9";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-<!-- 百度站长 -->
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>

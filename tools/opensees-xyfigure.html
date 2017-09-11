@@ -1,0 +1,24 @@
+---
+layout: tool
+title: 绘制xy关系曲线
+subtitle: 从recorder输出的文件中选择列绘制关系曲线
+description: 从recorder输出的文件中选择列绘制关系曲线
+updatetime: 2017-09-07
+author: 董翰林
+version: 1.0
+license: MIT
+view:
+    -   type: head
+        text: 读取文件
+    -   type: file_single
+        id: recorderdata
+        text: 选取recorder生成的文件
+    -   type: int_array
+        id: choosecolumn
+        text: x轴和y轴数据分别所在列号
+        default: "1,0"
+    -   type: float_array
+        id: ampfactor
+        text: x轴和y轴数所分别所乘系数
+        default: "1,1"
+---

@@ -1,0 +1,47 @@
+---
+layout: page
+---
+
+<div class="row">
+	<div class="col">
+		<div class="card mb-3">
+			<div class="card-body">
+				<h4 class="card-title">资源卡片</h4>
+				<div class="row">
+					<div class="col-12 col-md-8">
+						<dl class="row">
+							<dt class="col-sm-3">名称</dt>
+							<dd class="col-sm-9">{{ page.title }}</dd>
+							<dt class="col-sm-3">描述</dt>
+							<dd class="col-sm-9">{{ page.subtitle }}</dd>
+							<dt class="col-sm-3">简介</dt>
+							<dd class="col-sm-9">{{ page.description }}</dd>
+							<dt class="col-sm-3">更新时间</dt>
+							<dd class="col-sm-9">{{ page.updatetime | date: "%Y-%m-%d"}}</dd>
+							<dt class="col-sm-3">版本</dt>
+							<dd class="col-sm-9">{{ page.version }}</dd>
+							<dt class="col-sm-3">类型</dt>
+							<dd class="col-sm-9">{{ page.ftype }}</dd>
+							<dt class="col-sm-3">文件名</dt>
+							<dd class="col-sm-9">{{ page.fname }}</dd>
+							<dt class="col-sm-3">作者</dt>
+							<dd class="col-sm-9">{{ page.author }}</dd>
+							<dt class="col-sm-3">版权协议</dt>
+							<dd class="col-sm-9">{{ page.license }}</dd>
+						</dl>
+					</div>
+					<div class="col-12 col-md-4 text-center">
+						<div>
+							<a href="{{ page.fname | prepend: "/" | prepend: page.type | prepend: "/downloads/" }}" class="btn btn-primary btn-lg"><i class="fa fa-download"></i>立即下载</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="downloadpage">
+			{{ content }}
+		</div>
+		{% include baidufenxiang.html %}
+		{% include changyan.html %}
+	</div>
+</div>
