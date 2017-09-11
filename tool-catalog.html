@@ -28,7 +28,7 @@ subtitle: 实用的在线结构小工具
                 <div class="card-body card-mywrapper">
                     {% for item in type.items %}
                     {% for tool in site.pages %}
-                    {% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "tools/" %}
+                    {% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "tools/" | append: ".html" %}
                     {% if tool.path == realpath %}
                     <div class="card card-myelement" style="display:none;">
                         <a href="{{ tool.url | prepend: site.baseurl }}" class="no-decoration"><div class="card-body">
