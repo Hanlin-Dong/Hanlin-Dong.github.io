@@ -28,10 +28,10 @@ subtitle: 实用的在线结构小工具
                 <div class="card-body card-mywrapper">
                     {% for item in type.items %}
                     {% for tool in site.pages %}
-                    {% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "tools/" | append: ".html" %}
+                    {% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "tools/" %}
                     {% if tool.path == realpath %}
                     <div class="card card-myelement" style="display:none;">
-                        <a href="{{ tool.url | prepend: site.baseurl | replace: ".html", "/" }}" class="no-decoration"><div class="card-body">
+                        <a href="{{ tool.url | prepend: site.baseurl }}" class="no-decoration"><div class="card-body">
                             <h4 class="card-title">{{ tool.title }}</h4>
                             <h6 class="card-subtitle mb-2 text-muted">{{ tool.subtitle }}</h6>
                             <p class="card-text">{{ tool.description }}</p>
