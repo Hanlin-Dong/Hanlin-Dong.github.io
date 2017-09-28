@@ -3,6 +3,7 @@ http://www.hanlindong.com/sitemap.xml
 http://www.hanlindong.com/tags.html
 http://www.hanlindong.com/tool-catalog.html
 http://www.hanlindong.com/download-catalog.html
+http://www.hanlindong.com/2017/09/26/opensees-bootstrap.html
 http://www.hanlindong.com/2017/09/09/site-upgrade.html
 http://www.hanlindong.com/2017/06/07/write-on-gaokao.html
 http://www.hanlindong.com/2017/05/07/autolisp-beginner-2.html
@@ -31,6 +32,10 @@ http://www.hanlindong.com/fonts/academicons.ttf
 http://www.hanlindong.com/fonts/academicons.eot
 http://www.hanlindong.com/fonts/academicons.woff
 http://www.hanlindong.com/img/avatar-hanlin.jpg
+http://www.hanlindong.com/img/opensees-bootstrap-sublime.gif
+http://www.hanlindong.com/img/opensees-bootstrap-sublime-opensees.gif
+http://www.hanlindong.com/img/opensees-bootstrap-timehistory.png
+http://www.hanlindong.com/img/opensees-bootstrap-spectra.png
 http://www.hanlindong.com/img/autolisp-beginner-1-render.jpg
 http://www.hanlindong.com/img/autolisp-beginner-2-plotopensees.jpg
 http://www.hanlindong.com/img/latex-on-mac-ChangeDistribution.png
