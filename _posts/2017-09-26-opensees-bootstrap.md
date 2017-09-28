@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      OpenSees从零开始入门
+title:      OpenSees从零开始
 subtitle:   OpenSees初学者第一课的入门教程
 date:       2017-09-26 20:00:00
 author:     董翰林
