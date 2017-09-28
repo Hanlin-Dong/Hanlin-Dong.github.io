@@ -28,8 +28,8 @@ subtitle: 实用资源一键下载
 				<div class="card-body card-mywrapper">
 					{% for item in type.items %}
 					{% for download in site.pages %}
-					{% assign realpath = item | prepend: "-"| prepend: type.type | prepend: "downloadpages/" | append: ".html" %}
-					{% if download.path == realpath %}
+					{% assign realurl = item | prepend: "-"| prepend: type.type | prepend: "/downloadpages/" | append: "/" %}
+					{% if download.url == realurl %}
 					<div class="card card-myelement" style="display:none;">
 						<a href="{{ download.url }}" class="no-decoration"><div class="card-body">
 							<h4 class="card-title">{{ download.title }}</h4>

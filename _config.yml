@@ -26,9 +26,9 @@ researchgate_username: Hanlin_Dong
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 
 
-# permalink: pretty
+permalink: /:year/:title/
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+exclude: ["renewruls.txt", "urls.txt"]
 anchorjs: false                          # if you want to customize anchor. check out line:181 of `post.html`
 
 markdown: kramdown
@@ -70,10 +70,6 @@ featured-condition-size: 0              # A tag will be featured if the size of 
 
 # Friends
 friends: [
-    {
-        title: "OpenSeesTutorial",
-        href: "http://opensees.hanlindong.com/"
-    },
     {
         title: "小同人",
         href: "https://mp.weixin.qq.com/s?__biz=MzIxMzI5MzgyNg==&mid=2247483702&idx=1&sn=daea7b8132ffafff11df67532165b98e&scene=27#wechat_redirect"
