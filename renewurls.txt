@@ -1,4 +1,5 @@
 http://www.hanlindong.com/2017/09/26/opensees-bootstrap.html
+http://www.hanlindong.com/resource/ops/accel.txt
 http://www.hanlindong.com/
 http://www.hanlindong.com/sitemap.xml
 http://www.hanlindong.com/tags.html

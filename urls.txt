@@ -61,6 +61,7 @@ http://www.hanlindong.com/resource/ops/opq05.zip
 http://www.hanlindong.com/resource/lisp/tricircle.zip
 http://www.hanlindong.com/resource/lisp/plotOpensees.zip
 http://www.hanlindong.com/resource/latex/latex-on-mac.zip
+http://www.hanlindong.com/resource/ops/accel.txt
 http://www.hanlindong.com/tools/opensees-xyfigure.js
 http://www.hanlindong.com/tools/tool-template.js
 http://www.hanlindong.com/favicon.ico
