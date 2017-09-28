@@ -1,4 +1,5 @@
 http://www.hanlindong.com/
+http://www.hanlindong.com/page2/
 http://www.hanlindong.com/sitemap.xml
 http://www.hanlindong.com/tags.html
 http://www.hanlindong.com/tool-catalog.html
