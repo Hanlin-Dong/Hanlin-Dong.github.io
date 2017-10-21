@@ -22,6 +22,7 @@ http://www.hanlindong.com/downloadpages/opensees-PlotOPS2CAD/
 http://www.hanlindong.com/downloadpages/opensees-PseudoStaticAnalyze/
 http://www.hanlindong.com/downloadpages/opensees-HystereticDamperUniaxialModel/
 http://www.hanlindong.com/downloadpages/tongji-TongjiLogo/
+http://www.hanlindong.com/downloadpages/tongji-CivilEngLogo/
 http://www.hanlindong.com/css/hanlin.css
 http://www.hanlindong.com/css/academicons.min.css
 http://www.hanlindong.com/downloads/opensees/HystereticDamperUniaxialModel.tcl
