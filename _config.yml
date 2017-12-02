@@ -5,7 +5,7 @@ SEOTitle: "翰林苑 | 董翰林的个人网站"
 email: hanlin.dong@gmail.com
 description: "董翰林的个人网站，同济土木结构工程专业，提供在线结构工具，和结构工程相关资源下载。"
 keyword: "董翰林, 同济土木, 结构工具, opensees"
-url: "https://www.hanlindong.com"              # your host, for absolute URL
+url: "http://www.hanlindong.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
