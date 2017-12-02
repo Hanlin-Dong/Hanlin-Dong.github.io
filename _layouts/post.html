@@ -14,12 +14,12 @@ layout: default
 			<div class="row">
 				<div class="col-auto mr-auto">
 					{% if page.previous.url %}
-					<a href="{{ page.previous.url }}" class="btn btn-outline-secondary btn-lg"><small>上一篇</small><br>{{ page.previous.title }}</a>
+					<a href="{{ page.previous.url }}/" class="btn btn-outline-secondary btn-lg"><small>上一篇</small><br>{{ page.previous.title }}</a>
 					{% endif %}
 				</div>
 				<div class="col-auto">
 					{% if page.next.url %}
-					<a href="{{ page.next.url }}" class="btn btn-outline-secondary btn-lg"><small>下一篇</small><br>{{ page.next.title }}</a>
+					<a href="{{ page.next.url }}/" class="btn btn-outline-secondary btn-lg"><small>下一篇</small><br>{{ page.next.title }}</a>
 					{% endif %}
 				</div>
 			</div>
