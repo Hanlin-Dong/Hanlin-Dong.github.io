@@ -44,7 +44,7 @@ subtitle: 董翰林的个人网站
 				{% endfor %}
 				
 				<li class="page-item{% unless paginator.next_page %} disabled{% endunless %}">
-					<a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+					<a class="page-link" href="{{ paginator.next_page_path | append: '/' }}" aria-label="Next">
 						<span aria-hidden="true">Older &raquo;</span>
 						<span class="sr-only">Next</span>
 					</a>
