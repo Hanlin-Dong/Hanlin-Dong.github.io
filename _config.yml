@@ -28,7 +28,7 @@ researchgate_username: Hanlin_Dong
 
 permalink: /:year/:title/
 paginate: 10
-exclude: ["renewruls.txt", "urls.txt"]
+exclude: ["renewurls.txt", "urls.txt", "tags.html", "pushqiniu.py", LICENSE"]
 anchorjs: false                          # if you want to customize anchor. check out line:181 of `post.html`
 
 markdown: kramdown

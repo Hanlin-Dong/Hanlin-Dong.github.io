@@ -1,49 +1,68 @@
 ---
-layout: default
+layout: page
 title: 工具
 subtitle: 实用的在线结构小工具
 ---
 
-{% include jumbotron.html %}
+
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
-            <h6 class="mb-2">分类列表</h6>
-            <div id="tag_cloud">
-                {% for type in site.data.tools.toc %}
-                <a href="#{{ type.type }}" class="tag">{{ type.text }}</a>
+        <div class="col-sm-12 col-md-3">
+            <h6 class="text-right pr-3">FILTER</h6>
+            <nav>
+                <ul class="nav flex-column nav-pills text-right" id="sidegroup" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab">全部</a>
+                    </li>
+                    {% for group in site.data.tools.toc %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="{{ group.type }}-tab" data-toggle="tab" href="#{{ group.type }}" role="tab">{{ group.text }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-12 col-md-9">
+            <div class="tab-content" id="sidegroupcontent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    {% for group in site.data.tools.toc %}
+                        {% for item in group.items %}
+                            {% for tool in site.pages %}
+                                {% assign realurl = item | prepend: "-"| prepend: group.type | prepend: "/tools/" | append: "/" %}
+                                {% if tool.url == realurl %}
+                                    <a href="{{ tool.url }}" class="no-decoration">
+                                        <div class="card-body">
+                                            <h4 class="card-title">{{ tool.title }}</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">{{ tool.subtitle }}</h6>
+                                            <p class="card-text">{{ tool.description }}</p>
+                                        </div>
+                                    </a>
+                                    <hr class="row">
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                {% for group in site.data.tools.toc %}
+                    <div class="tab-pane fade" id="{{ group.type }}" role="tabpanel" aria-labelledby="{{ group.type }}-tab">
+                        {% for item in group.items %}
+                            {% for tool in site.pages %}
+                                {% assign realurl = item | prepend: "-"| prepend: group.type | prepend: "/tools/" | append: "/" %}
+                                {% if tool.url == realurl %}
+                                    <a href="{{ tool.url }}" class="no-decoration">
+                                        <div class="card-body">
+                                            <h4 class="card-title">{{ tool.title }}</h4>
+                                            <h6 class="card-subtitle mb-2 text-muted">{{ tool.subtitle }}</h6>
+                                            <p class="card-text">{{ tool.description }}</p>
+                                        </div>
+                                    </a>
+                                    <hr class="row">
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-    <hr>
-    <div class="row">
-        <div class="col-12">
-            {% for type in site.data.tools.toc %}
-            <div class="card mb-1" id="{{ type.type }}">
-                <div class="card-header d-flex justify-content-end">
-                    <div class="mr-auto"><h4 class="h4"><i class="fa fa-tag"></i> {{ type.text }} <span class="badge badge-secondary">{{ type.items.size }}</span></h4></div>
-                    <div class="my-collapse" data-collapsed="false" style="display:none;"><a href="javascript:void(0);" class="text-right text-muted"><i class="fa fa-angle-double-down"></i>展开全部</a></div>
-                </div>
-                <div class="card-body card-mywrapper">
-                    {% for item in type.items %}
-                    {% for tool in site.pages %}
-                    {% assign realurl = item | prepend: "-"| prepend: type.type | prepend: "/tools/" | append: "/" %}
-                    {% if tool.url == realurl %}
-                    <div class="card card-myelement" style="display:none;">
-                        <a href="{{ tool.url | prepend: site.baseurl }}" class="no-decoration"><div class="card-body">
-                            <h4 class="card-title">{{ tool.title }}</h4>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ tool.subtitle }}</h6>
-                            <p class="card-text">{{ tool.description }}</p>
-                        </div></a>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                    {% endfor %}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    {% include page-bottom.html %}
 </div>

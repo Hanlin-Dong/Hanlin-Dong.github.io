@@ -32,6 +32,9 @@
 #     Bug fix on the percentage run.
 #   2017-09-01 17:00 v4.0
 #     Change name to PseudoStaticAnalyze.
+#   2017-12-03 19:00 v5.0
+#     Discard the recursive function, because sometimes too much nesting causes problems.
+#     This time, use while iterations instead.
 #############################################################
 
 # Graph:
